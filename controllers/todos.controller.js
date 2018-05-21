@@ -1,6 +1,6 @@
 // Access CRUD service
 
-var TodoService = require("../services/todo.service");
+var TodoService = require("../services/todos.service");
 
 // saving module inside _this
 

@@ -6,6 +6,7 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var api = require("./routes/api.route");
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/api", api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -43,7 +45,7 @@ var bluebird = require("bluebird");
 var mongoose = require("mongoose");
 mongoose.Promise = bluebird;
 mongoose
-  .connect("mongodb://127.0.0.1:27017/todoapp", { useMongoClient: true })
+  .connect("mongodb://127.0.0.1:27017/todoapp")
   .then(() => {
     console.log(
       "Connected to MongoDB at URL : mongodb://127.0.0.1:27017/todoapp"
