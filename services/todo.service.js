@@ -87,3 +87,17 @@ exports.updateTodo = async function(todo) {
     throw Error("Error occured while updating");
   }
 };
+
+exports.deleteTodo = async function(id) {
+  // Deleting todo based on Id
+
+  try {
+    var deleted = await toDo.remove({ _id: id });
+    if (deleted.result.n === 0) {
+      throw Error("Item could not be deleted");
+    }
+    return deleted;
+  } catch (err) {
+    throw Error("Error occured when deleting item");
+  }
+};
