@@ -29,7 +29,7 @@ exports.createTodo = async function(req, res, next) {
 
   var todo = {
     title: req.body.title,
-    description: req.body.descritpion,
+    description: req.body.description,
     status: req.body.status
   };
 

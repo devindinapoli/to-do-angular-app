@@ -10,3 +10,5 @@ var ToDoSchema = new mongoose.Schema({
 
 ToDoSchema.plugin(mongoosePaginate);
 const ToDo = mongoose.model("Todo", ToDoSchema);
+
+module.exports = ToDo;

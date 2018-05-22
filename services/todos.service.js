@@ -59,7 +59,7 @@ exports.updateTodo = async function(todo) {
   try {
     // Find list item by Id
 
-    var oldTodo = await ToDo.findbyId(id);
+    var oldTodo = await ToDo.findById(id);
   } catch (err) {
     throw Error("Error while finding the toDo Item");
   }
@@ -92,7 +92,7 @@ exports.deleteTodo = async function(id) {
   // Deleting todo based on Id
 
   try {
-    var deleted = await toDo.remove({ _id: id });
+    var deleted = await ToDo.remove({ _id: id });
     if (deleted.result.n === 0) {
       throw Error("Item could not be deleted");
     }
