@@ -1,3 +1,3 @@
-# to-do-angular-app
+# to-do-api-app
 
-## A simple to do list application using Angular 6, MongoDB, mongoose, express, and bluebird. 
+ A simple API using NodeJS, ExpressJS, and MongoDB
