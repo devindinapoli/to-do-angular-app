@@ -1,4 +1,4 @@
-# to-do-api-app
+# to-do-api
 
  A simple API using NodeJS, ExpressJS, and MongoDB
 
